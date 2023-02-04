@@ -9,7 +9,7 @@ import '@fontsource/roboto/700.css';
 
 function App() {
   return (
-    <div className='App'>Hola, cara de bola
+    <div className='App'>
       <Home />
     </div>
   );
