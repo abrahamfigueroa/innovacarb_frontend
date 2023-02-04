@@ -71,11 +71,11 @@ nav {
   display: none;
 }
 .navbar-links-container a {
-  margin-right: 3rem;
+  margin-right: 2rem;
   text-decoration: none;
   color: black;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
