@@ -22,10 +22,6 @@ export const Navbar = () => {
     icon: <InfoIcon />
   },
   {
-    text: "Testimonios",
-    icon: <CommentRoundedIcon />
-  },
-  {
     text: "Preguntas Frecuentes",
     icon: <PhoneRoundedIcon />
   }
@@ -40,7 +36,6 @@ export const Navbar = () => {
       <div className='navbar-links-container'>
       <a href=''>Proceso</a>
       <a href=''>Sobre Nosotros</a>
-      <a href=''>Testimonios</a>
       <a href=''>Preguntas Frecuentes</a>
 
       <button className='primary-button'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar } from './Navbar'
-import CoverPicture from "../Components/Assets/composta1.png";
+// import CoverPicture from "../Components/Assets/composta1.png";
 import { FiArrowRight } from "react-icons/fi";
 
 export const Home = () => {
