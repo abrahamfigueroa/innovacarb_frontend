@@ -36,7 +36,7 @@ const workInfoData = [
                         <div className='info-boxes-img-container'>
                             <img src={data.image} />
                         </div>
-                        <h1>{data.title}</h1>
+                        <h2>{data.title}</h2>
                         <p>{data.text}</p>
                     </div>
                 ))

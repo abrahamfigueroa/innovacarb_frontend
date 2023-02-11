@@ -86,13 +86,15 @@ nav {
   align-items: flex-start;
 }
 .primary-heading {
-  font-size: clamp(2rem, 5vw, 4rem);
+  /* font-size: clamp(2rem, 5vw, 4rem); */
+  font-size: 40px;
   color: #4c4c4c;
   /* line-height: 5rem; */
   max-width: 600px;
 }
 .primary-text {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  /* font-size: clamp(1rem, 3vw, 1.5rem); */
+  font-size: 16px;
   max-width: 500px;
   color: #6a6a6a;
   margin: 1.5rem 0rem;
@@ -144,7 +146,7 @@ nav {
 .primary-subheading {
   font-weight: 700;
   color: #733009;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 .about-buttons-container {
   margin-top: 2rem;
@@ -292,7 +294,7 @@ nav {
   color: #505050;
   margin: 1rem 2rem;
 }
-.work-section-info h2 {
+.work-section-info h3 {
   margin: 1rem 0rem;
 }
 .work-section-bottom {
@@ -306,7 +308,7 @@ nav {
   flex: 1;
   display: flex;
   align-items: center;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 @media (max-width: 1000px) {
