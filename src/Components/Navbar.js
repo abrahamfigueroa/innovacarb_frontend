@@ -14,11 +14,11 @@ export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState (false)
   const menuOptions = [
     {
-    text: "Proceso",
+    text: "Sobre Nosotros",
     icon: <HomeIcon />
   },
   {
-    text: "Sobre Nosotros",
+    text: "Proceso",
     icon: <InfoIcon />
   },
   {
@@ -34,8 +34,8 @@ export const Navbar = () => {
       </div>
       {/* Container links */}
       <div className='navbar-links-container'>
-      <a href=''>Proceso</a>
       <a href=''>Sobre Nosotros</a>
+      <a href=''>Proceso</a>
       <a href=''>Preguntas Frecuentes</a>
 
       <button className='primary-button'>
