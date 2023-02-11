@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
 // import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -34,7 +35,7 @@ export const Navbar = () => {
       </div>
       {/* Container links */}
       <div className='navbar-links-container'>
-      <a href=''>Sobre Nosotros</a>
+      <Link href=''>Sobre Nosotros</Link>
       <a href=''>Proceso</a>
       <a href=''>Preguntas Frecuentes</a>
 

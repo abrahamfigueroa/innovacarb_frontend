@@ -9,7 +9,7 @@ export const Home = () => {
         <Navbar />
         <div className='home-banner-container'>
           <div className='home-bannerImage-container'>
-            <img src={BannerBackground} alt="" />
+            <img className='home-banner-image' src={BannerBackground} alt="" />
           </div>
           <div className='home-text-section'>
             <h1 className='primary-heading'>Bienvenidos a Innovacarb
