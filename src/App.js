@@ -22,8 +22,8 @@ function App() {
       <About />
       <Process />
       <Elements stripe={stripePromise}>
-      <div className="container p-4">
-        <div className="row h-100">
+      <div className="container-fluid">
+        <div className="">
           <div className="col-md-4 offset-md-4 h-100">
             <CheckoutForm />
           </div>
@@ -35,3 +35,6 @@ function App() {
 }
 
 export default App;
+
+
+// <div className="col-md-4 offset-md-4 h-100">

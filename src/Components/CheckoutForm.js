@@ -5,7 +5,6 @@ import "../App.css";
 import { loadStripe } from "@stripe/stripe-js";
 
 import {
-  Elements,
   CardElement,
   useStripe,
   useElements,
@@ -31,14 +30,13 @@ const CheckoutForm = () => {
     setLoading(true);
 
     if (!error) {
-      // console.log(paymentMethod)
       const { id } = paymentMethod;
       try {
         const { data } = await axios.post(
-          "http://localhost:3001/api/checkout",
+          "http://localhost:8001/api/checkout",
           {
             id,
-            amount: 10000, //cents
+            amount: 10000, //centavos
           }
         );
         console.log(data);
@@ -54,30 +52,31 @@ const CheckoutForm = () => {
   console.log(!stripe || loading);
 
   return (
-    <form className="card card-body" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       {/* Product Information */}
       <img
-        src="https://www.corsair.com/medias/sys_master/images/images/h80/hdd/9029904465950/-CH-9109011-ES-Gallery-K70-RGB-MK2-01.png"
-        alt="Corsair Gaming Keyboard RGB"
+        src="https://exigibuencafe.com/wp-content/uploads/2017/02/borra.jpg"
+        alt="Borra de cafe"
         className="img-fluid"
       />
 
-      <h3 className="text-center my-2">Price: 100$</h3>
+      <h3 className="text-center my-3 fs-3 text">Deja tu donativo: 100$</h3>
 
-      {/* User Card Input */}
       <div className="form-group">
         <CardElement />
       </div>
 
-      <button disabled={!stripe} className="btn btn-success">
+      <div class="d-grid gap-2">
+      <button disabled={!stripe} className="btn btn-success mt-3 mb-5" type="button">
         {loading ? (
           <div className="spinner-border text-light" role="status">
-            <span className="sr-only">Loading...</span>
+            <span className="sr-only"></span>
           </div>
         ) : (
-          "Buy"
+          "Donar"
         )}
       </button>
+      </div>
     </form>
   );
 };
