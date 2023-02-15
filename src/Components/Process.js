@@ -23,7 +23,7 @@ const workInfoData = [
 ]
 
   return (
-    <div className='work-section-wrapper'>
+    <div className='work-section-wrapper' id='Process'>
         <div className='work-section-top'>
             <p className='primary-subheading'>Proceso</p>
             <h1 className='primary-heading'>Nuestro proceso</h1>

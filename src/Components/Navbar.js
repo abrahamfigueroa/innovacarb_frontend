@@ -12,6 +12,11 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 
 export const Navbar = () => {
 
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+
+  const closeMenu = () => setClick(false)
+
   const [openMenu, setOpenMenu] = useState (false)
   const menuOptions = [
     {
@@ -35,9 +40,9 @@ export const Navbar = () => {
       </div>
       {/* Container links */}
       <div className='navbar-links-container'>
-      <Link href=''>Sobre Nosotros</Link>
-      <a href=''>Proceso</a>
-      <a href=''>Preguntas Frecuentes</a>
+      <Link to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Link>
+      <Link to="Process" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Proceso</Link>
+      <Link to="Questions" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Preguntas Frecuentes</Link>
 
       <button className='primary-button'>
         Ingresa
