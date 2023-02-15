@@ -51,9 +51,18 @@ const CheckoutForm = () => {
 
   console.log(!stripe || loading);
 
+  let infoPaymentcomplete=false;
+
+  const handleChange = (event) => {
+    if(event.complete) {
+      infoPaymentcomplete=true;
+      console.log("completo"+infoPaymentcomplete)
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
-      {/* Product Information */}
+      
       <img
         src="https://exigibuencafe.com/wp-content/uploads/2017/02/borra.jpg"
         alt="Borra de cafe"
@@ -63,12 +72,13 @@ const CheckoutForm = () => {
       <h3 className="text-center my-3 fs-3 text">Deja tu donativo: 100$</h3>
 
       <div className="form-group">
-        <CardElement />
+        <CardElement onChange={handleChange} />
       </div>
 
       <div class="d-grid gap-2">
-      <button disabled={!stripe} className="btn btn-success mt-3 mb-5" type="button">
-        {loading ? (
+      <button disabled={!stripe} className="btn btn-success mt-3 mb-5" type="submit">
+        {
+        loading ? (
           <div className="spinner-border text-light" role="status">
             <span className="sr-only"></span>
           </div>
