@@ -23,6 +23,7 @@ function App() {
       <Home />
       <About />
       <Process />
+      
       <Elements stripe={stripePromise}>
       <div className="container-fluid">
         <div className="">
