@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
-// import { BsCart2 } from "react-icons/bs";
-import { HiOutlineBars3 } from "react-icons/hi2";
+ import { HiOutlineBars3 } from "react-icons/hi2";
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"
-// import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+import { StickyNote2 } from '@mui/icons-material';
 
 
 export const Navbar = () => {
 
-  const [click, setClick] = useState(false)
-  const handleClick = () => setClick(!click)
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   const closeMenu = () => setClick(false)
 
