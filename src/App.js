@@ -3,6 +3,7 @@ import { Home } from './Components/Home';
 import About from './Components/About';
 import Process from './Components/Process';
 import Questions from './Components/Questions';
+import Footer from './Components/Footer';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Process />
       <Questions />
+      <Footer />
     </div>
   );
 }
