@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer-section-two primary-subheading">
             <div className="footer-section-columns">
                 <span className='primary-text'>Testimonios</span>
-                <span>Sobre Make Sence</span>
+                <span src="https://americas.makesense.org/americas/">Sobre Make Sence</span>
                 <span>Sobre Innovacarb</span>
             </div>
             <div className="footer-section-columns">
