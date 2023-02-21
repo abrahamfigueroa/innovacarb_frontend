@@ -2,12 +2,11 @@ import React from 'react';
 import { Navbar } from './Navbar';
 import BannerBackground from "../Assets/home-banner-background.png";
 
-export const Home = () => {
+export const Landing = () => {
 
 
   return (
     <>
-          <Navbar />
     <div className='home-container'>
     
         <div className='home-banner-container'>
@@ -25,4 +24,4 @@ export const Home = () => {
     </div>
     </>)
 }
-export default Home
+export default Landing

@@ -10,8 +10,11 @@ img {
 }
 .App {
   min-height: 100vh;
-  width: 85vw;
   max-width: 1900px;
+  margin: 0rem auto;
+}
+main {
+  width: 85vw;
   margin: 0rem auto;
 }
 body {
@@ -33,6 +36,8 @@ nav {
   top:0%;
   background-color: #f6f6f6 ;
   width: 100%;
+  padding: 30px;
+  z-index: 3;
 }
 .navbar-menu-container {
   display: none;
@@ -209,6 +214,7 @@ nav {
   margin: 6rem 0rem;
   display: flex;
   margin-top: 10rem;
+  padding: 30px;
 }
 .footer-logo-container {
   max-width: 110px;
