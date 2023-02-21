@@ -10,9 +10,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Layout/Root';
-import Home from './Pages/Home';
+import Home from './pages/Home';
 // import { Home, Schedule } from '@mui/icons-material';
-import Schedules from './Pages/Schedules';
+import Schedules from './pages/Schedules';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
