@@ -6,8 +6,10 @@ export const Home = () => {
 
 
   return (
+    <>
+          <Navbar />
     <div className='home-container'>
-        <Navbar />
+    
         <div className='home-banner-container'>
           <div className='home-bannerImage-container'>
             <img className='home-banner-image' src={BannerBackground} alt="" />
@@ -21,6 +23,6 @@ export const Home = () => {
           </div>
         </div>
     </div>
-  )
+    </>)
 }
 export default Home

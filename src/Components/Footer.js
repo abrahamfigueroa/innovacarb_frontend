@@ -3,6 +3,7 @@ import Logo from "../Assets/logo-innovacarb.png";
 import { SiLinkedin } from "react-icons/si";
 import {FaFacebookF} from "react-icons/fa";
 import {AiFillInstagram} from "react-icons/ai"
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -20,7 +21,8 @@ const Footer = () => {
         <div className="footer-section-two primary-subheading">
             <div className="footer-section-columns">
                 <span className='primary-text'>Testimonios</span>
-                <span src="https://americas.makesense.org/americas/">Sobre Make Sence</span>
+                <span><a href='https://americas.makesense.org/americas/'>Sobre Make Sence</a></span>
+                {/* <span><Link to={{pathname:"https://americas.makesense.org/americas/"}}></Link>Sobre Make Sence</span> */}
                 <span>Sobre Innovacarb</span>
             </div>
             <div className="footer-section-columns">

@@ -28,6 +28,11 @@ nav {
   align-items: center;
   justify-content: space-between;
   min-height: 90px;
+  width: 100%;
+  position: sticky;
+  top:0%;
+  background-color: #f6f6f6 ;
+  width: 100%;
 }
 .navbar-menu-container {
   display: none;
@@ -223,17 +228,20 @@ nav {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  text-decoration: none;
 }
 .footer-section-columns {
   display: flex;
   flex-direction: column;
   min-width: 300px;
+  text-decoration: none;
 }
 .footer-section-columns span {
   margin: 0.50rem 0rem;
   font-weight: 400;
   color: #4c4c4c;
   cursor: pointer;
+  text-decoration: none;
 }
 .testimonial-section-bottom {
   margin-top: 2rem;
@@ -417,9 +425,11 @@ nav {
   .footer-section-two {
     flex-direction: column;
     margin-top: 2rem;
+    text-decoration: none;
   }
   .footer-section-columns {
     margin: 1rem 0rem;
+    text-decoration: none;
   }
   .App {
     max-width: 95vw;
