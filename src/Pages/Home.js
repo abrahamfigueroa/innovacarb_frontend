@@ -14,21 +14,13 @@ import {stripePromise} from '../Components/CheckoutForm'
 const Home = () => {
   return (
     <div>
-        <Navbar />
         <Landing />
         <About />
         <Process />
         <Questions />
         <Elements stripe={stripePromise}>
-      <div className="container-fluid">
-        <div className="">
-          <div className="col-md-4 offset-md-4 h-100">
             <CheckoutForm />
-          </div>
-        </div>
-      </div>
     </Elements>
-        <Footer />
     </div>
   )
 }

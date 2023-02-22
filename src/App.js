@@ -34,12 +34,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <div className='App'>
-      <Home />
+      <RouterProvider router={router} />
     </div>
   );
 }
 
 export default App;
-
-
-// <div className="col-md-4 offset-md-4 h-100">
