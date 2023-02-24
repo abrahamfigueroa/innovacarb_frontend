@@ -1,0 +1,13 @@
+@import './Variables';
+  
+Button, .primary700 {
+    background-color: $primary700,
+    }
+
+.borderprimary700 {
+  border-color: $primary700,
+  }
+
+Link, .fontprimary700 {
+  color: $primary700,
+}
