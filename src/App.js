@@ -20,13 +20,14 @@ import Root from './Layout/Root';
 import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
 import {Elements} from "@stripe/react-stripe-js";
+import SignIn from './Pages/SignIn'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path='schedules' element={<Schedules />} />
-      {/* <Route path='login' element={<LogIn />} /> */}
+      <Route path='SignIn' element={<SignIn />} />
       <Route path='*' element={<p>Hijole joven, aquí no hay nada :C</p>} />
     </Route>
   )
