@@ -17,8 +17,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Layout/Root';
-import Home from './pages/Home';
-import Schedules from './pages/Schedules';
+import Home from './Pages/Home';
+import Schedules from './Pages/Schedules';
 import {Elements} from "@stripe/react-stripe-js";
 
 const router = createBrowserRouter(
