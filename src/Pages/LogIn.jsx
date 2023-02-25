@@ -1,18 +1,14 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import '../stylesheets/SignIn.css'
+import axios from 'axios'
 
 function Copyright(props) {
   return (
@@ -29,14 +25,28 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+const Login = () => {
+  const [body, setBody] = useState({ username: '', password: '' })
+  /* const { push } = useNavigate() */
+
+  const inputChange = ({ target }) => {
+      const { name, value } = target
+      setBody({
+          ...body,
+          [name]: value
+      })
+  }
+
+  const onSubmit = () => {
+      axios.post('http://localhost:8000/users/auth', body)
+          /* .then(({ data }) => {
+              localStorage.setItem('auth', '"yes"')
+              push('/app')
+          }) */
+          .then((res) => console.log(res))
+          .catch(({ response }) => {
+              console.log(response.data)
+          })
   }
 
   return (
@@ -56,11 +66,11 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar> */}
           <Typography component="h1" variant="h5">
-            Nuevo Usuario
+            Vienes por un café?
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+             {/*  <Grid item xs={12} sm={6}>
                 <TextField
                   className="borderprimary700"
                   autoComplete="given-name"
@@ -71,8 +81,8 @@ export default function SignIn() {
                   label="Nombre"
                   autoFocus
                 />
-              </Grid>
-              <Grid item xs={12} sm={6}>
+              </Grid> */}
+              {/* <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -81,7 +91,7 @@ export default function SignIn() {
                   name="lastName"
                   autoComplete="family-name"
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12}>
                 <TextField
                   required
@@ -90,6 +100,8 @@ export default function SignIn() {
                   label="Correo electrónico"
                   name="email"
                   autoComplete="email"
+                  value={body.username}
+                  onChange={inputChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,7 +112,9 @@ export default function SignIn() {
                   label="Contraseña"
                   type="password"
                   id="password"
-                  autoComplete="new-password"
+                  autoComplete="password"
+                  onChange={inputChange}
+                  value={body.password}
                 />
               </Grid>
               {/* <Grid item xs={12}>
@@ -112,18 +126,19 @@ export default function SignIn() {
               </Grid> */}
             </Grid>
             <Button
-              className="primary700"
+              className="backgroundprimary700"
               type="submit"
               fullWidth
               variant="contained"
+              onClick={onSubmit}
               sx={{ mt: 3, mb: 2 }}
             >
-              Registrarse
+              Ingresar
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className='fontprimary700'>
-                  ¿Ya tienes una cuenta? Ingresa!
+                <Link href="#" variant="body2" className='colorprimary700'>
+                  Aún no tienes una cuenta? Regístrate!
                 </Link>
               </Grid>
             </Grid>
@@ -134,3 +149,5 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
+
+export default Login;

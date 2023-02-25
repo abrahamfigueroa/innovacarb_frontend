@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, NavLink } from 'react'
 import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
  import { HiOutlineBars3 } from "react-icons/hi2";
@@ -46,6 +46,7 @@ export const Navbar = () => {
       <button className='primary-button'>
         Ingresa
       </button>
+            
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
