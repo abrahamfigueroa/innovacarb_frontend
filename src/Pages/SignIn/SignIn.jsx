@@ -9,8 +9,9 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
+import { SimpleSnackbar } from "../../Components/Snackbar";
 
-import '../../Stylesheets/Variables.css'
+import "../../Stylesheets/Variables.css";
 
 function Copyright(props) {
   return (
@@ -45,7 +46,7 @@ const SignIn = () => {
   };
 
   const onSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     axios
       .post("http://localhost:8000/users/auth", body)
       .then((res) => {
@@ -56,8 +57,7 @@ const SignIn = () => {
       //.then((data) => console.log(data))
       .catch(({ response }) => {
         console.log(response.data);
-        console.alert('Falló joven')
-      })
+      });
   };
 
   return (
