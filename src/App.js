@@ -20,19 +20,22 @@ import Root from './Layout/Root';
 import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
 // import {Elements} from "@stripe/react-stripe-js";
-import LogIn from './Pages/LogIn'
+import SignIn from './Pages/LogIn'
 import SignUp from './Pages/SignUp'
 import Pricing from './Pages/Pricing'
+import DashboardUser from './Pages/DashboardUser/DashboardUser'
+//import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path='schedules' element={<Schedules />} />
-      <Route path='login' element={<LogIn />} />
+      <Route path='login' element={<SignIn />} />
       <Route path='signup' element={<SignUp />} />
       <Route path='pricing' element={<Pricing />} />
-      <Route path='*' element={<p>Hijole joven, aquí no hay nada :C</p>} />
+      <Route path='dashboarduser' element={<DashboardUser />} />
+      {/* <Route path='*' element={<NotFoundPage />} /> */}
     </Route>
   )
 );

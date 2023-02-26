@@ -1,57 +1,57 @@
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { useNavigate } from 'react-router'
-import axios from 'axios'
-
+import axios from "axios";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         Innovacarb
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
 
 const theme = createTheme();
 
-const Login = () => {
-  const [body, setBody] = useState({ username: '', password: '' })
-  // const { push } = useNavigate()
+const SignUp = () => {
+  const [body, setBody] = useState({ email: "", password: "" });
 
   const inputChange = ({ target }) => {
-      const { name, value } = target
-      setBody({
-          ...body,
-          [name]: value
-      })
-  }
+    console.log(target.name);
+    const { name, value } = target;
+    setBody({
+      ...body,
+      [name]: value,
+    });
+  };
 
   const onSubmit = () => {
-      axios.post('http://localhost:8000/users/auth', body)
-          /* .then(({ data }) => {
-              localStorage.setItem('auth', '"yes"')
-              push('/app')
-          }) */
-          .then((res) => console.log(res))
-          .catch(({ response }) => {
-              console.log(response.data)
-          })
-  }
+    axios
+      .post("http://localhost:8000/users/", body)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch(({ response }) => console.log(response.data));
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -60,12 +60,11 @@ const Login = () => {
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-           
           {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar> */}
@@ -116,28 +115,16 @@ const Login = () => {
                   label="Contraseña"
                   type="password"
                   id="password"
-                  autoComplete="password"
                   onChange={inputChange}
                   value={body.password}
                 />
               </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Vuelve a escribir tu contraseña"
-                  type="password"
-                  id="password"
-                  autoComplete="password"
-                  onChange={inputChange}
-                  value={body.password}
-                />
-              </Grid>
+
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary"
-                   />}
+                  control={
+                    <Checkbox value="allowExtraEmails" color="primary" />
+                  }
                   label="Servicio disponible únicamente en Guadalajara"
                 />
               </Grid>
@@ -154,7 +141,7 @@ const Login = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className='colorprimary700'>
+                <Link href="#" variant="body2" className="colorprimary700">
                   Ya tienes una cuenta? Ingresa!
                 </Link>
               </Grid>
@@ -165,6 +152,6 @@ const Login = () => {
       </Container>
     </ThemeProvider>
   );
-}
+};
 
-export default Login;
+export default SignUp;
