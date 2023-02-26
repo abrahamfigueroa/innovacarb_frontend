@@ -35,7 +35,9 @@ export const Navbar = () => {
   return (
     <nav>
       <div className='nav-logo-container'>
-        <img src={Logo} alt="" /> 
+        <a href='/'>  
+          <img src={Logo} alt="" /> 
+        </a>
       </div>
       {/* Container links */}
       <div className='navbar-links-container'>

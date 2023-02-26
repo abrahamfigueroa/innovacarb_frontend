@@ -7,6 +7,7 @@ import Root from '../Layout/Root';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import CheckoutForm from '../Components/CheckoutForm';
+import { Link } from 'react-router-dom';
 import {Elements} from "@stripe/react-stripe-js";
 import {stripePromise} from '../Components/CheckoutForm'
 

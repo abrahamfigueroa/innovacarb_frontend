@@ -10,7 +10,9 @@ const Footer = () => {
     <div className="footer-wrapper">
         <div className="footer-section-one">
             <div className="footer-logo-container">
+                <a href='/'>
                 <img src={Logo} alt="" />
+                </a>
             </div>
             <div className="footer-icons">
                 <SiLinkedin />
