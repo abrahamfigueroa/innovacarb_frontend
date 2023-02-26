@@ -10,6 +10,8 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 
+import '../../Stylesheets/Variables.css'
+
 function Copyright(props) {
   return (
     <Typography
@@ -42,7 +44,8 @@ const SignIn = () => {
     });
   };
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault()
     axios
       .post("http://localhost:8000/users/auth", body)
       .then((res) => {
@@ -51,7 +54,10 @@ const SignIn = () => {
       })
       //.then((res) => res.json())
       //.then((data) => console.log(data))
-      .catch(({ response }) => console.log(response.data));
+      .catch(({ response }) => {
+        console.log(response.data);
+        console.alert('Falló joven')
+      })
   };
 
   return (
@@ -131,7 +137,7 @@ const SignIn = () => {
               </Grid> */}
             </Grid>
             <Button
-              className="backgroundprimary700"
+              className="bg-primary700"
               type="submit"
               fullWidth
               variant="contained"
@@ -142,7 +148,7 @@ const SignIn = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className="colorprimary700">
+                <Link href="#" variant="body2" className="color-primary700">
                   Aún no tienes una cuenta? Regístrate!
                 </Link>
               </Grid>

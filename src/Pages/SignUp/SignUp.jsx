@@ -13,6 +13,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { useNavigate } from 'react-router'
 import axios from "axios";
 
+import '../../Stylesheets/Variables.css'
+
 function Copyright(props) {
   return (
     <Typography
@@ -45,7 +47,8 @@ const SignUp = () => {
     });
   };
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault()
     axios
       .post("http://localhost:8000/users/", body)
       .then((res) => res.json())
@@ -130,7 +133,7 @@ const SignUp = () => {
               </Grid>
             </Grid>
             <Button
-              className="backgroundprimary700"
+              className="bg-primary700"
               type="submit"
               fullWidth
               variant="contained"
@@ -141,7 +144,7 @@ const SignUp = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className="colorprimary700">
+                <Link href="#" variant="body2" className="color-primary700">
                   Ya tienes una cuenta? Ingresa!
                 </Link>
               </Grid>

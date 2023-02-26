@@ -20,9 +20,9 @@ import Root from './Layout/Root';
 import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
 // import {Elements} from "@stripe/react-stripe-js";
-import SignIn from './Pages/LogIn'
-import SignUp from './Pages/SignUp'
-import Pricing from './Pages/Pricing'
+import SignIn from './Pages/SignIn/SignIn'
+import SignUp from './Pages/SignUp/SignUp'
+import Pricing from './Pages/Pricing/Pricing'
 import DashboardUser from './Pages/DashboardUser/DashboardUser'
 //import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 

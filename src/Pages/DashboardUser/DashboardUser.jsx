@@ -1,4 +1,5 @@
 import React from "react";
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 const DashboardUser = () => {
   return (
@@ -22,7 +23,7 @@ const DashboardUser = () => {
       </div>
       <div>
         <p>Cafetería certificada</p>
-        <p>Cafetería certificada</p>
+        <EmojiEventsIcon fontSize='large'/>
         <p>Categoría dorada</p>
       </div>
     </body>
