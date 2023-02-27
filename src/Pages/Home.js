@@ -21,7 +21,7 @@ const Home = () => {
         <Questions />
         <Elements stripe={stripePromise}>
             <CheckoutForm />
-    </Elements>
+        </Elements>
     </div>
   )
 }

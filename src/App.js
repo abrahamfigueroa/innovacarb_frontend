@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Router,
   RouterProvider,
 } from "react-router-dom";
 import Root from './Layout/Root';
@@ -21,6 +22,7 @@ import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
 import Profile from './Pages/Profile';
 import {Elements} from "@stripe/react-stripe-js";
+import { Switch } from '@mui/material';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +42,22 @@ function App() {
   return (
     <div className='App'>
       <RouterProvider router={router} />
+
+    {/* <Router>
+      <Switch>
+
+        <Route path="/" exact> */}
+        {/* {users <Home /> : <Login /> } */}
+         {/* </Route> */}
+        {/* <Route path="/Register">
+          <Ingresa />
+        </Route> */}
+        {/* <Route path="/profile/:userId">
+          <Profile />
+        </Route>
+      </Switch>
+    </Router> */}
+
     </div>
   );
 }
