@@ -86,7 +86,9 @@ const SignUp = () => {
                   id="firstName"
                   label="Nombre"
                   autoFocus
-                />
+                  value={body.firstname}
+                  onChange={inputChange}
+/>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -96,6 +98,8 @@ const SignUp = () => {
                   label="Apellido"
                   name="lastName"
                   autoComplete="family-name"
+                  value={body.lastname}
+                  onChange={inputChange}
                 />
               </Grid>
               <Grid item xs={12}>

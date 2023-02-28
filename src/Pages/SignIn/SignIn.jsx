@@ -49,12 +49,12 @@ const SignIn = () => {
     event.preventDefault();
     axios
       .post("http://localhost:8000/users/auth", body)
+      .then((res) => console.log(res))
+      .then((res) => res.json())
       .then((res) => {
         localStorage("auth", res.ok);
         localStorage("token", res.payload);
       })
-      //.then((res) => res.json())
-      //.then((data) => console.log(data))
       .catch(({ response }) => {
         console.log(response.data);
       });
