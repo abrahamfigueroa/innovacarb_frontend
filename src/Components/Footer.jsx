@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
-    <div className="footer-wrapper" style={{position: 'absolute', width: '100%', height: '81px', bottom: 0, left: 0}}>
+    <div className="footer-wrapper">
         <div className="footer-section-one">
             <div className="footer-logo-container">
                 <a href='/'>
