@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { useEffect, useState, NavLink } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
- import { HiOutlineBars3 } from "react-icons/hi2";
+import { HiOutlineBars3 } from "react-icons/hi2";
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"
@@ -35,12 +34,12 @@ export const Navbar = () => {
 
   return (
     <nav>
-       
       <div className='nav-logo-container'>
         <a href='/'>  
           <img src={Logo} alt="" /> 
         </a>
       </div>
+      {/* Container links */}
       <div className='navbar-links-container'>
       <Link to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Link>
       <Link to="Process" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Proceso</Link>
@@ -49,7 +48,6 @@ export const Navbar = () => {
       <button className='primary-button'>
         Ingresa
       </button>
-            
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
