@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
- import { HiOutlineBars3 } from "react-icons/hi2";
+import { HiOutlineBars3 } from "react-icons/hi2";
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"
