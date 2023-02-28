@@ -36,7 +36,7 @@ function Copyright(props) {
 const theme = createTheme();
 
 const SignUp = () => {
-  const [body, setBody] = useState({ email: "", password: "" });
+  const [body, setBody] = useState({ email: "", password: "",firstName: "", lastName: ""});
 
   const inputChange = ({ target }) => {
     console.log(target.name);
@@ -86,9 +86,9 @@ const SignUp = () => {
                   id="firstName"
                   label="Nombre"
                   autoFocus
-                  value={body.firstname}
+                  value={body.firstName}
                   onChange={inputChange}
-/>
+                />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -98,7 +98,7 @@ const SignUp = () => {
                   label="Apellido"
                   name="lastName"
                   autoComplete="family-name"
-                  value={body.lastname}
+                  value={body.lastName}
                   onChange={inputChange}
                 />
               </Grid>
