@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Router,
   RouterProvider,
 } from "react-router-dom";
 import Root from './Layout/Root';
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path='schedules' element={<Schedules />} />
+      <Route path='profile' element={<Profile />} />
       <Route path='login' element={<SignIn />} />
       <Route path='signup' element={<SignUp />} />
       <Route path='pricing' element={<Pricing />} />
@@ -44,6 +46,22 @@ function App() {
   return (
     <div className='App'>
       <RouterProvider router={router} />
+
+    {/* <Router>
+      <Switch>
+
+        <Route path="/" exact> */}
+        {/* {users <Home /> : <Login /> } */}
+         {/* </Route> */}
+        {/* <Route path="/Register">
+          <Ingresa />
+        </Route> */}
+        {/* <Route path="/profile/:userId">
+          <Profile />
+        </Route>
+      </Switch>
+    </Router> */}
+
     </div>
   );
 }

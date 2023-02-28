@@ -4,6 +4,7 @@ import About from '../Components/About';
 import Process from '../Components/Process';
 import Questions from '../Components/Questions';
 import CheckoutForm from '../Components/CheckoutForm';
+import { Link } from 'react-router-dom';
 import {Elements} from "@stripe/react-stripe-js";
 import {stripePromise} from '../Components/CheckoutForm'
 
@@ -17,7 +18,7 @@ const Home = () => {
         <Questions />
         <Elements stripe={stripePromise}>
             <CheckoutForm />
-    </Elements>
+        </Elements>
     </div>
   )
 }

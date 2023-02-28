@@ -10,7 +10,9 @@ const Footer = () => {
     <div className="footer-wrapper" style={{position: 'absolute', width: '100%', height: '81px', bottom: 0, left: 0}}>
         <div className="footer-section-one">
             <div className="footer-logo-container">
+                <a href='/'>
                 <img src={Logo} alt="" />
+                </a>
             </div>
             <div className="footer-icons">
                 <SiLinkedin />

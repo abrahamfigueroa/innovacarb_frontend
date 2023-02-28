@@ -37,7 +37,9 @@ export const Navbar = () => {
     <nav>
        
       <div className='nav-logo-container'>
-        <img src={Logo} alt="logo" href='www.google.com'/> 
+        <a href='/'>  
+          <img src={Logo} alt="" /> 
+        </a>
       </div>
       <div className='navbar-links-container'>
       <Link to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Link>
