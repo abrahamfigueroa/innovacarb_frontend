@@ -20,6 +20,7 @@ import {
 import Root from './Layout/Root';
 import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
+import Profile from './Pages/Profile';
 // import {Elements} from "@stripe/react-stripe-js";
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
@@ -33,7 +34,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='schedules' element={<Schedules />} />
       <Route path='profile' element={<Profile />} />
-      <Route path='login' element={<SignIn />} />
+      <Route path='signin' element={<SignIn />} />
       <Route path='signup' element={<SignUp />} />
       <Route path='pricing' element={<Pricing />} />
       <Route path='dashboarduser' element={<DashboardUser />} />
