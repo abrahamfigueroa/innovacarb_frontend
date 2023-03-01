@@ -13,7 +13,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { useNavigate } from 'react-router'
 import axios from "axios";
 
-import '../../Stylesheets/Variables.css'
+import "../../Stylesheets/Variables.css";
+//import { Snackbar } from "@mui/material";
 
 function Copyright(props) {
   return (
@@ -36,10 +37,14 @@ function Copyright(props) {
 const theme = createTheme();
 
 const SignUp = () => {
-  const [body, setBody] = useState({ email: "", password: "",firstName: "", lastName: ""});
+  const [body, setBody] = useState({
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+  });
 
   const inputChange = ({ target }) => {
-    console.log(target.name);
     const { name, value } = target;
     setBody({
       ...body,
@@ -48,12 +53,17 @@ const SignUp = () => {
   };
 
   const onSubmit = (event) => {
-    event.preventDefault()
-    axios
-      .post("http://localhost:8000/users/", body)
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch(({ response }) => console.log(response.data));
+    if (body.passwordconfirm !== body.password) {
+      console.log("Contraseña no coincide");
+      //<Snackbar open={open} />
+    } else {
+      event.preventDefault();
+      axios
+        .post("http://localhost:8000/users/", body)
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch(({ response }) => console.log(response.data));
+    }
   };
 
   return (
@@ -126,7 +136,18 @@ const SignUp = () => {
                   value={body.password}
                 />
               </Grid>
-
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="passwordconfirm"
+                  label="Repite tu contraseña"
+                  type="passwordconfirm"
+                  id="passwordconfirm"
+                  onChange={inputChange}
+                  value={body.passwordconfirm}
+                />
+              </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
                   control={

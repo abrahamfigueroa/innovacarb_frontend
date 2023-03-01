@@ -47,4 +47,4 @@ export function SimpleSnackbar() {
       />
     </div>
   );
-}
+}src/Pages/SignUp/SignUp.jsx
