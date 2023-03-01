@@ -76,7 +76,7 @@ const SignUp = () => {
             <LockOutlinedIcon />
           </Avatar> */}
           <Typography component="h1" variant="h5">
-            BIENVENIDO!
+            ¡BIENVENIDO!
           </Typography>
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -136,7 +136,7 @@ const SignUp = () => {
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="Servicio disponible únicamente en Guadalajara"
+                  label="Por el momento este servicio se encuentra disponible únicamente en Guadalajara*"
                 />
               </Grid>
             </Grid>
@@ -153,7 +153,7 @@ const SignUp = () => {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2" className="color-primary700">
-                  Ya tienes una cuenta? Ingresa!
+                  ¿Ya tienes una cuenta? ¡Ingresa!
                 </Link>
               </Grid>
             </Grid>

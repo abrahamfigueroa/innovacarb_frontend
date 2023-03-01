@@ -20,7 +20,7 @@ import {
 import Root from './Layout/Root';
 import Home from './Pages/Home';
 import Schedules from './Pages/Schedules';
-import Profile from './Pages/Profile';
+import Profile from './Pages/Profile/Profile';
 // import {Elements} from "@stripe/react-stripe-js";
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
