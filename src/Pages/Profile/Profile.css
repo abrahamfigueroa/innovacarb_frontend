@@ -1,0 +1,65 @@
+.MainProfileDiv{
+    height: 100vh;
+    background: #f6f6f6;
+    overflow-x: hidden;
+}
+.profile-container{
+    width: 100%;
+    height: 100vh;
+    background: #f6f6f6;
+    margin: auto;
+}
+.top-section {
+    width: 100%;
+    height: 45%;
+    position: relative;
+}
+.user-profile-bg-image{
+    width: 100%;
+    height: 88%;
+    background: #8c3b0b;
+    overflow: hidden;
+}
+.profile-bg-img{
+    width: 100vw;
+    height: 100vh;
+    margin-top: -12rem;
+}
+.user-profile-image{
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    border-radius: 50%;
+    transform: translate(50%);
+    right: 50%;
+    background-color: #5da668;
+    bottom: -2rem;
+    border: 2px solid #f6f6f6;
+}
+.profile-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.userName{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -5rem;
+    font-size: 2rem;
+    color: #0d0d0d;
+}
+.bottom-section{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+}
+.right-menu{
+    flex: 0.70;
+    height: 100%;
+}
