@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
@@ -7,6 +7,7 @@ import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import { StickyNote2 } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 export const Navbar = () => {
@@ -44,10 +45,11 @@ export const Navbar = () => {
       <Link to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Link>
       <Link to="Process" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Proceso</Link>
       <Link to="Questions" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Preguntas Frecuentes</Link>
+    
+          <Link to='/signup' className='primary-button'>Ingresa</Link>
 
-      <button className='primary-button'>
-        Ingresa
-      </button>
+      
+      
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

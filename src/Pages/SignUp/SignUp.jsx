@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 
 import '../../Stylesheets/Variables.css'
@@ -32,10 +32,10 @@ function Copyright(props) {
     </Typography>
   );
 }
-
 const theme = createTheme();
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [body, setBody] = useState({ email: "", password: "",firstName: "", lastName: ""});
 
   const inputChange = ({ target }) => {
@@ -52,8 +52,12 @@ const SignUp = () => {
     axios
       .post("http://localhost:8000/users/", body)
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        
+        console.log(data)
+        })
       .catch(({ response }) => console.log(response.data));
+      return navigate("/profile")
   };
 
   return (
