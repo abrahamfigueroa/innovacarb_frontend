@@ -58,10 +58,10 @@
     margin-top: 5rem;
 }
 .right-menu{
-    flex: 0.30;
+    flex: 0.05;
     height: 100%;
 }
 .info-section{
-    flex: 0.70;
+    flex: 0.95;
     height: 100%;
 }

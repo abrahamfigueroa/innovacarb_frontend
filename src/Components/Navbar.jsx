@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import { Link } from 'react-scroll';
+import { Link as Scroll } from 'react-scroll';
 import Logo from "../Assets/logo-innovacarb.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
@@ -32,7 +32,8 @@ export const Navbar = () => {
     icon: <PhoneRoundedIcon />
   }
 ];
-
+const pathname = window.location.pathname
+console.log(pathname);
   return (
     <nav>
       <div className='nav-logo-container'>
@@ -41,12 +42,15 @@ export const Navbar = () => {
         </a>
       </div>
       {/* Container links */}
-      <div className='navbar-links-container'>
-          <Link to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Link>
-          <Link to="Process" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Proceso</Link>
-          <Link to="Questions" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Preguntas Frecuentes</Link>    
+      {pathname !== "/signup" ? 
+      <div className='navbar-links-container'> 
+          <Scroll to="About" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Sobre Nosotros</Scroll>
+          <Scroll to="Process" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Proceso</Scroll>
+          <Scroll to="Questions" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}>Preguntas Frecuentes</Scroll>    
           <Link to='/signup' className='primary-button'>Ingresa</Link>
-      </div>
+      </div> :
+      null
+      }
 
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

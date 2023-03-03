@@ -36,9 +36,6 @@ const Profile = () => {
 
           <div className="right-menu">
             <SettingsProfile />
-            <a>Tus recolecciones</a>
-            <a>Editar perfil</a>
-            <a>Cerrar sesión</a>
           </div>
 
         </div>
