@@ -13,6 +13,9 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Link } from 'react-scroll';
+import { Schedule } from '@mui/icons-material';
+import Schedules from '../../Pages/Schedules';
 
 
 
@@ -90,19 +93,21 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <a className="schedules-button" href='/Schedules'><MenuItem onClick={handleClose} disableRipple Link to={<Schedules />}>
           <DeleteSweepIcon />
           Tus recolecciones
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
+        </MenuItem></a>
+
+        <a className="editProfile-button" href='#'><MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
           Editar perfil
-        </MenuItem>
+        </MenuItem></a>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+
+        <a className="LogOut-button" href='#'><MenuItem onClick={handleClose} disableRipple>
           <LogoutIcon />
           Cerrar sesión
-        </MenuItem>
+        </MenuItem></a>
       </StyledMenu>
     </div>
   );

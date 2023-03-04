@@ -5,3 +5,35 @@
     padding: 1rem;
     box-shadow: 1rem 1rem 2rem 1rem lightgray;
 }
+.data-cafes{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px 20px;
+    justify-content: space-between;
+}
+.data{
+    color: black;
+    font-size: 50px;
+    text-decoration: dashed;
+    display: flex;
+    justify-content: center;
+}
+.data-emoji{
+    size: 10rem;
+}
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px 20px;
+    justify-content: space-between;
+}
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
