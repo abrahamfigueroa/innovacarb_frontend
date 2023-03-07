@@ -14,16 +14,25 @@ const Footer = () => {
                 <img src={Logo} alt="" />
                 </a>
             </div>
+            
             <div className="footer-icons">
+                <a href='#'>
                 <SiLinkedin />
+                </a>
+                <a href='#'>
                 <FaFacebookF />
+                </a>
+                <a href='#'>
                 <AiFillInstagram />
+                </a>     
             </div>
         </div>
         <div className="footer-section-two primary-subheading">
             <div className="footer-section-columns">
                 <span className='primary-text'>Testimonios</span>
-                <span><a href='https://americas.makesense.org/americas/'>Sobre Make Sense</a></span>
+                <span>
+                    <a href='https://americas.makesense.org/americas/'>Sobre Make Sense</a>
+                </span>
                 {/* <span><Link to={{pathname:"https://americas.makesense.org/americas/"}}></Link>Sobre Make Sence</span> */}
                 <span>Sobre Innovacarb</span>
             </div>

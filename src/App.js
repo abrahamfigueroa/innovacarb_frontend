@@ -19,14 +19,14 @@ import {
 } from "react-router-dom";
 import Root from './Layout/Root';
 import Home from './Pages/Home';
-import Schedules from './Pages/Schedules';
+import Schedules from './Pages/Schedules/Schedules';
 import Profile from './Pages/Profile/Profile';
-// import {Elements} from "@stripe/react-stripe-js";
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
 import Pricing from './Pages/Pricing/Pricing'
 import DashboardUser from './Pages/DashboardUser/DashboardUser'
-//import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
+import Datepicker from './Pages/DatePicker/Datepicker'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +38,7 @@ const router = createBrowserRouter(
       <Route path='signup' element={<SignUp />} />
       <Route path='pricing' element={<Pricing />} />
       <Route path='dashboarduser' element={<DashboardUser />} />
+      <Route path='datepicker' element={<Datepicker />} />
       {/* <Route path='*' element={<NotFoundPage />} /> */}
     </Route>
   )
@@ -47,22 +48,6 @@ function App() {
   return (
     <div className='App'>
       <RouterProvider router={router} />
-
-    {/* <Router>
-      <Switch>
-
-        <Route path="/" exact> */}
-        {/* {users <Home /> : <Login /> } */}
-         {/* </Route> */}
-        {/* <Route path="/Register">
-          <Ingresa />
-        </Route> */}
-        {/* <Route path="/profile/:userId">
-          <Profile />
-        </Route>
-      </Switch>
-    </Router> */}
-
     </div>
   );
 }

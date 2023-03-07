@@ -15,7 +15,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-scroll';
 import { Schedule } from '@mui/icons-material';
-import Schedules from '../../Pages/Schedules';
+import Schedules from '../../Pages/Schedules/Schedules';
 
 
 
