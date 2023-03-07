@@ -26,6 +26,7 @@ import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
 import Pricing from './Pages/Pricing/Pricing'
 import DashboardUser from './Pages/DashboardUser/DashboardUser'
+import DashboardAdmin from './Pages/DashboardAdmin/DashboardAdmin';
 //import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 const router = createBrowserRouter(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
       <Route path='signup' element={<SignUp />} />
       <Route path='pricing' element={<Pricing />} />
       <Route path='dashboarduser' element={<DashboardUser />} />
+      <Route path='dashboardadmin' element={<DashboardAdmin />} />
       {/* <Route path='*' element={<NotFoundPage />} /> */}
     </Route>
   )
