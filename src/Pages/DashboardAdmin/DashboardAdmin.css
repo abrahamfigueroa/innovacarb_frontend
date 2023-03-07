@@ -9,4 +9,12 @@
 
 * {
   font-family: "Sora", sans-serif !important;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #A5A3A4;
+  border-radius: 20px;
 }/*# sourceMappingURL=DashboardAdmin.css.map */
