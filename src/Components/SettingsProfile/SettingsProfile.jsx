@@ -78,6 +78,7 @@ export default function CustomizedMenus() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         variant="contained"
+        color='success'
         disableElevation
         onClick={handleClick}
         endIcon={<MenuIcon />}
