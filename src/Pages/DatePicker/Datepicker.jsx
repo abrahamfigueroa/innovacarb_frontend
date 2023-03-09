@@ -1,29 +1,30 @@
-import * as React from 'react';
-import dayjs from 'dayjs';
-import Box from '@mui/material/Box';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import {InlineWidget} from 'react-calendly'
 
-
-export default function CustomInput() {
-  const [value, setValue] = React.useState(dayjs('2022-04-07'));
-
+export default function Datepicker() {
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker
-        label="Custom input"
-        value={value}
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        renderInput={({ inputRef, inputProps, InputProps }) => (
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <input ref={inputRef} {...inputProps} />
-            {InputProps?.endAdornment}
-          </Box>
-        )}
-      />
-    </LocalizationProvider>
-  );
+      <div>
+        <br></br>
+        <div className="infoDatepicker">
+        <h1>Elige tu próxima cita</h1>
+        <p>¡Hola! Indícanos en qué días deseas que recolectemos tus desechos de café</p>
+        <br></br>
+        </div>
+        <InlineWidget url="https://calendly.com/abraham-figueroaj/30min" />
+      </div>
+  )
 }
+// class Calendly extends Component {
+//   componentDidMount() {
+//     // whatever stuff you need here
+//   }
+//   componentWillUnmount() {
+//     // whatever cleanup stuff you need here
+//   }
+//   render(){
+//     return (
+//       <div>
+//         <InlineWidget url="https://calendly.com/username/15min" />
+//       </div>
+//     );
+//   }
+// }
