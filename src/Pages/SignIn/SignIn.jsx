@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { SimpleSnackbar } from "../../Components/Snackbar";
+import { useNavigate } from "react-router-dom";
 
 import "../../Stylesheets/Variables.css";
 
@@ -34,6 +35,7 @@ function Copyright(props) {
 const theme = createTheme();
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [body, setBody] = useState({ email: "", password: "" });
 
   const inputChange = ({ target }) => {
@@ -46,18 +48,22 @@ const SignIn = () => {
   };
 
   const onSubmit = (event) => {
+    console.log(body);
     event.preventDefault();
     axios
       .post("http://localhost:8000/users/auth", body)
-      .then((res) => console.log(res))
-      .then((res) => res.json())
       .then((res) => {
-        localStorage("auth", res.ok);
-        localStorage("token", res.payload);
-      })
-      .catch(({ response }) => {
-        console.log(response.data);
-      });
+        console.log(res)
+        localStorage.setItem('innovacarbToken', res.data.payload);
+        return navigate("/profile")
+        })
+      // .then((res) => res.json())
+      // .then((res) => {
+      //   localStorage("auth", res.ok);
+      //   localStorage("token", res.payload);
+      // })
+      .catch(({ response }) => 
+        console.error(response));
   };
 
   return (
@@ -76,7 +82,7 @@ const SignIn = () => {
             <LockOutlinedIcon />
           </Avatar> */}
           <Typography component="h1" variant="h5">
-            Vienes por un café?
+            ¡Bienvenido de nuevo!
           </Typography>
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -148,8 +154,8 @@ const SignIn = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className="color-primary700">
-                  Aún no tienes una cuenta? Regístrate!
+                <Link href="/signup" variant="body2" className="color-primary700">
+                  ¿Aún no tienes una cuenta? ¡Regístrate!
                 </Link>
               </Grid>
             </Grid>

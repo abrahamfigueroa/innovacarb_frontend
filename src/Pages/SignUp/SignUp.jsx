@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useNavigate } from 'react-router-dom'
+import { Form, useNavigate } from 'react-router-dom'
 import axios from "axios";
 
 import '../../Stylesheets/Variables.css'
@@ -48,16 +48,21 @@ const SignUp = () => {
   };
 
   const onSubmit = (event) => {
+    console.log(body);
     event.preventDefault()
     axios
       .post("http://localhost:8000/users/", body)
-      .then((res) => res.json())
-      .then((data) => {
+      .then((res) => { 
+        console.log(res)
+        return navigate("/profile")
+      })
+      // .then((data) => {
         
-        console.log(data)
-        })
-      .catch(({ response }) => console.log(response.data));
-      return navigate("/profile")
+      //   console.log(data)
+      //   })
+      .catch(({ response } ) => 
+      console.error(response));
+      // return navigate("/profile")
   };
 
   return (
@@ -152,7 +157,7 @@ const SignUp = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className="color-primary700">
+                <Link href="/signin" variant="body2" className="color-primary700">
                   ¿Ya tienes una cuenta? ¡Ingresa!
                 </Link>
               </Grid>

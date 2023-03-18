@@ -4,7 +4,7 @@ import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
-const UserInfo = () => {
+const UserInfo = ({data}) => {
   return (
     <div className="main-userInfo-container">
 
@@ -13,11 +13,11 @@ const UserInfo = () => {
           <p className="waste-data">
             <span>Cantidad de kg de desechos de café aportados: 
             </span>
-            <span className='data'>50 kg</span>
+            <span className='data'>{data.kgContributions} kg </span>
           </p>
           <p className="activeCarbon-data">
             <span>Lo que equivale a: </span>
-            <span className="data">5kg De carbono activado </span>
+            <span className="data">{data.kgAverage} kg De carbono activado </span>
             </p>
           <p className="badge-category">
             <span>Cafetería certificada con Categoría: </span>
