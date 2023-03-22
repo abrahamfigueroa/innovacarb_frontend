@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import MUIDataTable from "mui-datatables";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const columns = ["Día", "Fecha", "Horario"];
 const data = [
@@ -27,7 +28,17 @@ const data = [
 
 const options = { filterType: "checkbox" };
 
-export const Schedules = () => {
+export const Schedules = ({data}) => {
+const [schedulesData, setSchedulesData] = useState([])
+
+useEffect(() => {
+  axios
+  .get("http://localhost:8000/schedules")
+  .then((res) => {
+    setSchedulesData(res.data.payload)
+  })
+},[])
+
   const navigate = useNavigate();
 
   return (

@@ -16,6 +16,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-scroll';
 import { Schedule } from '@mui/icons-material';
 import Schedules from '../../Pages/Schedules/Schedules';
+import EditProfile from '../../Pages/EditProfile/EditProfile'
 
 
 
@@ -99,7 +100,7 @@ export default function CustomizedMenus() {
           Tus recolecciones
         </MenuItem></a>
 
-        <a className="editProfile-button" href='#'><MenuItem onClick={handleClose} disableRipple>
+        <a className="editProfile-button" href='/editProfile'><MenuItem onClick={handleClose} disableRipple Link to={<EditProfile />}>
           <EditIcon />
           Editar perfil
         </MenuItem></a>

@@ -26,6 +26,7 @@ import SignUp from './Pages/SignUp/SignUp'
 import Pricing from './Pages/Pricing/Pricing'
 import DashboardUser from './Pages/DashboardUser/DashboardUser'
 import Datepicker from './Pages/DatePicker/Datepicker'
+import EditProfile from './Pages/EditProfile/EditProfile';
 
 
 const router = createBrowserRouter(
@@ -33,6 +34,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path='schedules' element={<Schedules />} />
+      <Route path='editProfile' element={<EditProfile />} />
       <Route path='profile' element={<Profile />} />
       <Route path='signin' element={<SignIn />} />
       <Route path='signup' element={<SignUp />} />
