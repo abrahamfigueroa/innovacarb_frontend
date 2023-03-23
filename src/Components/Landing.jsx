@@ -17,7 +17,7 @@ export const Landing = () => {
             <h1 className='primary-heading'>Bienvenidos a Innovacarb
             </h1>
             <p className='primary-text'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum lorem metus. In interdum ultrices ante, vitae consectetur dolor tempor.
+            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum lorem metus. In interdum ultrices ante, vitae consectetur dolor tempor. */}
             </p>
           </div>
         </div>
