@@ -11,8 +11,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { SimpleSnackbar } from "../../Components/Snackbar";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 
 import "../../Stylesheets/Variables.css";
+// import { id } from "date-fns/locale";
 
 function Copyright(props) {
   return (
@@ -55,7 +58,10 @@ const SignIn = () => {
       .then((res) => {
         console.log(res)
         localStorage.setItem('innovacarbToken', res.data.payload);
-        return navigate("/profile")
+        const decoded = jwt_decode(res.data.payload); 
+        console.log(decoded)
+        const id = decoded.sub
+        return navigate(`/profile/${id}`)
         })
       // .then((res) => res.json())
       // .then((res) => {
