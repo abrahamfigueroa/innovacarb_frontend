@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap");
+.bg-primary700 {
+  background-color: #8c3b0b !important;
+}
+
+.color-primary700 {
+  color: #8c3b0b !important;
+}
+
+* {
+  font-family: "Sora", sans-serif !important;
+}/*# sourceMappingURL=Table.css.map */

@@ -13,7 +13,7 @@ export default function BasicTextFields() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Buscar" variant="outlined" />
+      <TextField id="outlined-basic" label="Buscar" variant="outlined" size="small" color="warning" />
     </Box>
   );
 }
