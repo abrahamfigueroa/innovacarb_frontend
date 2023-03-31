@@ -19,8 +19,10 @@ const About = () => {
             </h1>
             <p className='primary-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum lorem metus. In interdum ultrices ante, vitae consectetur dolor tempor.</p>
             <div className='about-buttons-container'>
-                <button className='watch-video-button'>
-                {""}    
+                <button className='watch-video-button'      
+                onClick={() => window.open
+                (`https://www.youtube.com/watch?v=kvhJIzQzmYA&list=PL8TnDfzHd1At8h2GY0j1a9VKr6pvsDD_2&index=6`)}>
+                {""}
                     <BsFillPlayCircleFill/> Mirar video
                 </button>
             </div>

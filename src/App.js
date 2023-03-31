@@ -27,6 +27,7 @@ import Pricing from './Pages/Pricing/Pricing'
 import DashboardUser from './Pages/DashboardUser/DashboardUser'
 import Datepicker from './Pages/DatePicker/Datepicker'
 import EditProfile from './Pages/EditProfile/EditProfile';
+import Admin from './Pages/Admin/Admin';
 
 
 const router = createBrowserRouter(
@@ -41,6 +42,8 @@ const router = createBrowserRouter(
       <Route path='pricing' element={<Pricing />} />
       <Route path='dashboarduser' element={<DashboardUser />} />
       <Route path='datepicker' element={<Datepicker />} />
+      <Route path='admin' element={<Admin />} />
+      <Route path='profile' element={<Profile />} />
       {/* <Route path='*' element={<NotFoundPage />} /> */}
     </Route>
   )

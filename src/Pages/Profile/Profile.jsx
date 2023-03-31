@@ -12,7 +12,7 @@ import jwt_decode from "jwt-decode";
 const Profile = () => {
   const navigate = useNavigate();
   const {id} = useParams();
-console.log(id)
+  console.log(id)
 
 const [coffeshopData, setCoffeshopData] = useState([])
 const [coffeshopId, setCoffeshopId] = useState("")
@@ -35,12 +35,10 @@ useEffect(() => {
       <div className="profile-container">
         <div className="top-section">
 
-          <div className="user-profile-bg-image">
-            <img id="profile-bg-img" src="" alt="" />
-          </div>
+          {/* <div className="user-profile-bg-image">
+          </div> */}
 
           <div className="user-profile-image">
-            <img id="profile-img"src="" alt="" />
           </div>
 
           <div 
@@ -62,7 +60,6 @@ useEffect(() => {
 
         </div>
       </div>
-      {/* ID : {userId} */}
     </div>)
   )
 }

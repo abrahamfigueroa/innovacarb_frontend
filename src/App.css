@@ -214,7 +214,7 @@ nav {
 .footer-wrapper {
   margin: 2rem 0rem;
   display: flex;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   padding: 30px;
 }
 .footer-logo-container {
@@ -442,7 +442,7 @@ nav {
     max-width: 95vw;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 868px) {
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;
