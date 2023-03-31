@@ -30,8 +30,10 @@ const Footer = () => {
         <div className="footer-section-two primary-subheading">
             <div className="footer-section-columns">
                 <span className='primary-text'>Testimonios</span>
-                <span>
-                    <a href='https://americas.makesense.org/americas/'>Sobre Make Sense</a>
+                <span
+                 onClick={() => window.open
+                (`https://americas.makesense.org/americas/`)}>
+                    Sobre Make Sense
                 </span>
                 {/* <span><Link to={{pathname:"https://americas.makesense.org/americas/"}}></Link>Sobre Make Sence</span> */}
                 <span>Sobre Innovacarb</span>
