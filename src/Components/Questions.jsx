@@ -21,9 +21,10 @@ const Questions = () => {
 
       </div>
       {/* Pregunta1 */}
+      <div className="questions-section">
     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
       <AccordionSummary id='panel1-header' aria-controls='panel1-content' expandIcon={<ExpandMoreIcon />}>
-        <p>¿Cómo funciona?</p>
+        <h3>¿Cómo funciona?</h3>
       </AccordionSummary>
       <AccordionDetails>
         <p>
@@ -75,6 +76,7 @@ const Questions = () => {
         </p>
       </AccordionDetails>
     </Accordion>
+    </div>
     </div>
     )
 }

@@ -283,6 +283,12 @@ nav {
 .work-section-wrapper {
   margin-top: 15rem;
 }
+
+.questions-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .work-section-top p {
   text-align: center;
   max-width: 600px !important;
