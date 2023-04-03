@@ -16,13 +16,17 @@ const Footer = () => {
             </div>
             
             <div className="footer-icons">
-                <a href='#'>
-                <SiLinkedin />
-                </a>
+                <a onClick={() => window.open
+                (`https://www.linkedin.com/company/innovacarb/posts/?feedView=all`)}
+                style={{cursor:'pointer'}}>
+                <SiLinkedin /></a>
+                {/* </a>
                 <a href='#'>
                 <FaFacebookF />
-                </a>
-                <a href='#'>
+                </a> */}
+                <a onClick={() => window.open
+                (`https://www.instagram.com/innovacarb_mx/`)}
+                style={{cursor:'pointer'}}>
                 <AiFillInstagram />
                 </a>     
             </div>

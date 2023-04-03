@@ -70,7 +70,7 @@ const CheckoutForm = () => {
       />
         <p className="primary-text-checkoutForm">¿Te gustaría colaborar pero no tienes una cafetería? ¡Puedes dejar tu donativo!</p>
       <br></br>
-      <h3 className="text-center my-3 fs-3 text">Deja tu donativo: <input type='number'>
+      <h3 className="text-center my-3 fs-3">Deja tu donativo: <input type='number'>
       </input> mxn</h3>
 
       <div className="form-group">
