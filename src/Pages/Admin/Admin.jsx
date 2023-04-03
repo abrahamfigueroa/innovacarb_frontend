@@ -95,6 +95,8 @@ const columnsUsers = [
         options={options}
       />,
       <br></br>
+      <h2>Esta es tu lista de usuarios</h2>
+      <br></br>
           <MUIDataTable
         title={"Usuarios"}
         data={users}

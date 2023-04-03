@@ -66,16 +66,18 @@ const CheckoutForm = () => {
       <img
         src="https://exigibuencafe.com/wp-content/uploads/2017/02/borra.jpg"
         alt="Borra de cafe"
-        className="img-fluid"
+        className="img-checkout"
       />
-
-      <h3 className="text-center my-3 fs-3 text">Deja tu donativo: 100$</h3>
+        <p className="primary-text-checkoutForm">¿Te gustaría colaborar pero no tienes una cafetería? ¡Puedes dejar tu donativo!</p>
+      <br></br>
+      <h3 className="text-center my-3 fs-3 text">Deja tu donativo: <input type='number'>
+      </input> mxn</h3>
 
       <div className="form-group">
         <CardElement onChange={handleChange} />
       </div>
 
-      <div class="d-grid gap-2">
+      <div className="gap-2 alignItems-center d-flex">
       <button disabled={!stripe} className="btn btn-success mt-3 mb-5" type="submit">
         {
         loading ? (
