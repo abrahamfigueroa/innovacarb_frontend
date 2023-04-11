@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootswatch/dist/lux/bootstrap.min.css";
 import "../App.css";
+import Button from "@mui/material/Button";
 
 import { loadStripe } from "@stripe/stripe-js";
 
@@ -78,7 +79,7 @@ const CheckoutForm = () => {
       </div>
 
       <div className="gap-2 alignItems-center d-flex">
-      <button disabled={!stripe} className="btn btn-success mt-3 mb-5" type="submit">
+      <Button variant="contained" color="success" disabled={!stripe} className="btn mt-3 mb-5" type="submit">
         {
         loading ? (
           <div className="spinner-border text-light" role="status">
@@ -87,7 +88,7 @@ const CheckoutForm = () => {
         ) : (
           "Donar"
         )}
-      </button>
+      </Button>
       </div>
     </form>
   );

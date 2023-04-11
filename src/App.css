@@ -338,6 +338,11 @@ nav {
   margin-bottom: 2rem;
 }
 
+.textModal {
+  margin-top: 25px;
+  /* text-align: center; */
+}
+
 @media (max-width: 1000px) {
   .navbar-links-container a {
     margin-right: 1rem;

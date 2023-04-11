@@ -124,43 +124,6 @@ const SignUp = () => {
                 <TextField
                   required
                   fullWidth
-                  id="nameCoffeeShop"
-                  label="Nombre de cafetería"
-                  name="nameCoffeeShop"
-                  autoComplete="Nombre de cafetería"
-                  value={body.nameCoffeeShop}
-                  onChange={inputChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="phoneNumber"
-                  type="number"
-                  label="Número telefónico"
-                  name="phoneNumber"
-                  autoComplete="Número telefónico"
-                  value={body.phoneNumber}
-                  onChange={inputChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="address"
-                  label="Dirección de la cafetería"
-                  name="address"
-                  autoComplete="Dirección de la cafetería"
-                  value={body.address}
-                  onChange={inputChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
                   name="password"
                   label="Define una contraseña"
                   type="password"
