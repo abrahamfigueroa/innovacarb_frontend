@@ -42,13 +42,13 @@ const handleClose = () => setOpenModal(false);
 const handleNewCoffeeShop = (e) => {
   e.preventDefault()
   console.log("ok");
-}
+};
 
   return (
     coffeshopData.length === 0 ? (
     <>
     <h2 className='textModal'>No tienes cafeterías agregadas</h2>
-    <Button className="mt-3 mb-5" sx={{ borderRadius: '16px' }} variant="contained" color="success" onClick={handleOpen}>Agregar cafetería</Button>
+    <Button className="mt-3 mb-5 bg-primary700" sx={{ borderRadius: '16px' }} variant="contained" onClick={handleOpen}>Agregar cafetería</Button>
           <BasicModal open={openModal} modalTitle={"Agrega una nueva cafetería"} close={handleClose}>
       {/* <Box onSubmit={handleNewCoffeeShop} component="div" noValidate sx={{ mt: 3 }}> */}
       <Grid container component="form" onSubmit={(e) => handleNewCoffeeShop(e)}>
@@ -93,7 +93,7 @@ const handleNewCoffeeShop = (e) => {
                 />
                  </Grid>
                 <Grid item>
-                  <Button className="mt-3 mb-2" sx={{ borderRadius: '16px' }} variant="contained" color="success" type="submit">Registrar cafetería</Button>
+                  <Button className="mt-3 mb-2 bg-primary700" sx={{ borderRadius: '16px' }} variant="contained" type="submit">Registrar cafetería</Button>
                 </Grid>
               </Grid>
       {/* </Box> */}
