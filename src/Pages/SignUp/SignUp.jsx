@@ -39,7 +39,6 @@ const SignUp = () => {
   const [body, setBody] = useState({ email: "", password: "",firstName: "", lastName: ""});
 
   const inputChange = ({ target }) => {
-    console.log(target.name);
     const { name, value } = target;
     setBody({
       ...body,
@@ -48,13 +47,13 @@ const SignUp = () => {
   };
 
   const onSubmit = (event) => {
-    console.log(body);
     event.preventDefault()
     axios
       .post("http://localhost:8000/users/", body)
       .then((res) => { 
-        console.log(res)
-        return navigate("/profile")
+        localStorage.setItem('innovacarbToken', res.data.userInfo.token);
+        const id = res.data.userInfo.id
+        navigate(`/profile/${id}`)
       })
 
       .catch(({ response } ) => 

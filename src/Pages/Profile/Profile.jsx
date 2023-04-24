@@ -20,15 +20,14 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 
 const Profile = () => {
+  const setToken = localStorage.getItem("innovacarbToken");
   const navigate = useNavigate();
   const { id } = useParams();
-  console.log(id);
 
   const [coffeshopData, setCoffeshopData] = useState([]);
   const [coffeshopId, setCoffeshopId] = useState("");
   const [openModal, setOpenModal] = useState(false);
-  const valueToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2M2ZlYWZmMGY0NmRkZWQ4MDc5NTRmZTQiLCJyb2wiOiJjdXN0b21lciIsImlhdCI6MTY4MTQ0OTIzOCwiZXhwIjoxNzEyOTg1MjM4fQ.1OV8fSaOj0dMctkSb-cVC1coWQzuaDaNhST8BFoXrCg";
+
   const [firstCoffeeShop, setFirstCoffeeShop] = useState({
     nameCafeteria: "",
     ownerName: "",
@@ -41,11 +40,10 @@ const Profile = () => {
     axios
       .get(`http://localhost:8000/users/${id}`, {
         headers: {
-          Authorization: `Bearer ${valueToken}`,
+          Authorization: `Bearer ${setToken}`,
         },
       })
       .then((res) => {
-        console.log(res.data.payload.coffeshop.length);
         setCoffeshopData(res.data.payload.coffeshop);
       });
   }, [openModal]);
@@ -59,18 +57,15 @@ const Profile = () => {
     e.preventDefault();
     axios.post(`http://localhost:8000/coffeshop/`, firstCoffeeShop, {
       headers: {
-        Authorization: `Bearer ${valueToken}`,
+        Authorization: `Bearer ${setToken}`,
       },
     })
     .then((res) => {
-      console.log(res)
       if(res.status=== 200) {
         setOpenModal(false)
       }
     })
-    console.log("ok");
   };
-  console.log(firstCoffeeShop);
   return coffeshopData.length === 0 ? (
     <>
       <h2 className="textModal">No tienes cafeterías agregadas</h2>

@@ -42,7 +42,6 @@ const SignIn = () => {
   const [body, setBody] = useState({ email: "", password: "" });
 
   const inputChange = ({ target }) => {
-    console.log(target.name);
     const { name, value } = target;
     setBody({
       ...body,
@@ -51,15 +50,12 @@ const SignIn = () => {
   };
 
   const onSubmit = (event) => {
-    console.log(body);
     event.preventDefault();
     axios
       .post("http://localhost:8000/users/auth", body)
       .then((res) => {
-        console.log(res)
         localStorage.setItem('innovacarbToken', res.data.payload);
         const decoded = jwt_decode(res.data.payload); 
-        console.log(decoded)
         const id = decoded.sub
         return navigate(`/profile/${id}`)
         })
